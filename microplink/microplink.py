@@ -129,10 +129,3 @@ class PlinkFiles(object):
         genotypes = _get_genotypes(self.rawbed[snp_index], self.num_indivs)
         genotypes = pd.Series(genotypes, index=self.fam.index)
         return genotypes
-
-
-# example:
-# pf = PlinkFiles('test.bed', 'test.bim', 'test.fam')
-# pf.get_genotypes(chromosome=1, position=10000)  # fetch by chromosome and position
-# pf.get_genotypes(snp='rs1235123')    # fetch by RSID
-# pf.get_genotypes(snp_index=0)  # first SNP in bim
