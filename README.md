@@ -13,18 +13,18 @@ distributions.
 Installation
 ------------
 
-Run `pip install microplink` or clone this repository and run
-
-```
-python setup.py install
-```
+Run `pip install microplink` or clone this repository and run `python setup.py
+install` from the repository directory.
 
 Usage
 -----
 
 Typical usage:
 
-    pf = PlinkFiles('test.bed', 'test.bim', 'test.fam')
+    import microplink as mic
+
+    # Equivalent to `pf = mic.PlinkFiles('test.bed', 'test.bim', 'test.fam')`
+    pf = mic.PlinkFiles('test')
 
     # fetch by chromosome and position
     pf.get_genotypes(chromosome=1, position=10000)
